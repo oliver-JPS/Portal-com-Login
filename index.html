@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Authentication Portal</title>
+  <meta name="description" content="Secure authentication portal with modern design and JWT-based identity management">
+  <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="background-animation">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
+
+  <!-- Welcome Container -->
+  <div class="welcome-container">
+    <div class="welcome-card">
+      <!-- Logo -->
+      <div class="welcome-logo">A</div>
+      
+      <!-- Welcome Content -->
+      <h1 class="welcome-title">Welcome to Our Platform</h1>
+      <p class="welcome-subtitle">
+        Secure authentication powered by modern JWT technology
+      </p>
+
+      <!-- Features Grid -->
+      <div class="welcome-features">
+        <div class="feature-item">
+          <span class="feature-icon">🔐</span>
+          <h3>Secure</h3>
+          <p>Industry-standard encryption and JWT authentication</p>
+        </div>
+        
+        <div class="feature-item">
+          <span class="feature-icon">⚡</span>
+          <h3>Fast</h3>
+          <p>Lightning-fast authentication with automatic token refresh</p>
+        </div>
+        
+        <div class="feature-item">
+          <span class="feature-icon">🎨</span>
+          <h3>Modern</h3>
+          <p>Beautiful interface with smooth animations</p>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="welcome-actions">
+        <a href="login.html" class="btn btn-primary" id="getStartedBtn">
+          Get Started
+          <span class="btn-arrow">→</span>
+        </a>
+        <p class="welcome-note">
+          New here? Just enter your email and create a password to get started!
+        </p>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="welcome-footer">
+        <div class="tech-badges">
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">JWT</span>
+          <span class="tech-badge">bcrypt</span>
+          <span class="tech-badge">SQLite</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add entrance animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const card = document.querySelector('.welcome-card');
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      
+      setTimeout(() => {
+        card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 100);
+
+      // Add hover effect to get started button
+      const btn = document.getElementById('getStartedBtn');
+      btn.addEventListener('mouseenter', () => {
+        btn.querySelector('.btn-arrow').style.transform = 'translateX(5px)';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.querySelector('.btn-arrow').style.transform = 'translateX(0)';
+      });
+    });
+  </script>
+</body>
+</html>
